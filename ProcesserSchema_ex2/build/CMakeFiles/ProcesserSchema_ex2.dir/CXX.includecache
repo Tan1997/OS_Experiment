@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.cpp
+process.h
+/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.h
+iostream
+-
+
+/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.h
+string
+-
+
+/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/processerschema.cpp
+iostream
+-
+process.h
+/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.h
+
