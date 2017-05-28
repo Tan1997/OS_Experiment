@@ -7,7 +7,7 @@ class process
 	int ID;
 	int workTime = 0;
 public:
-	int serviceTime, comeTime;
+	int serviceTime, comeTime,finishTime;
 	string name;
 	process();
 	process(int ID, int serviceTime, int comeTime, string name);

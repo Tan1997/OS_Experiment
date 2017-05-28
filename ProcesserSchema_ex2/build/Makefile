@@ -114,6 +114,30 @@ ProcesserSchema_ex2/fast:
 	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/build
 .PHONY : ProcesserSchema_ex2/fast
 
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 process.o: process.cpp.o
 .PHONY : process.o
 
@@ -138,29 +162,29 @@ process.cpp.s:
 	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/process.cpp.s
 .PHONY : process.cpp.s
 
-processerschema.o: processerschema.cpp.o
-.PHONY : processerschema.o
+processschma.o: processschma.cpp.o
+.PHONY : processschma.o
 
 # target to build an object file
-processerschema.cpp.o:
-	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processerschema.cpp.o
-.PHONY : processerschema.cpp.o
+processschma.cpp.o:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processschma.cpp.o
+.PHONY : processschma.cpp.o
 
-processerschema.i: processerschema.cpp.i
-.PHONY : processerschema.i
+processschma.i: processschma.cpp.i
+.PHONY : processschma.i
 
 # target to preprocess a source file
-processerschema.cpp.i:
-	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processerschema.cpp.i
-.PHONY : processerschema.cpp.i
+processschma.cpp.i:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processschma.cpp.i
+.PHONY : processschma.cpp.i
 
-processerschema.s: processerschema.cpp.s
-.PHONY : processerschema.s
+processschma.s: processschma.cpp.s
+.PHONY : processschma.s
 
 # target to generate assembly for a file
-processerschema.cpp.s:
-	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processerschema.cpp.s
-.PHONY : processerschema.cpp.s
+processschma.cpp.s:
+	$(MAKE) -f CMakeFiles/ProcesserSchema_ex2.dir/build.make CMakeFiles/ProcesserSchema_ex2.dir/processschma.cpp.s
+.PHONY : processschma.cpp.s
 
 # Help Target
 help:
@@ -171,12 +195,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProcesserSchema_ex2"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... process.o"
 	@echo "... process.i"
 	@echo "... process.s"
-	@echo "... processerschema.o"
-	@echo "... processerschema.i"
-	@echo "... processerschema.s"
+	@echo "... processschma.o"
+	@echo "... processschma.i"
+	@echo "... processschma.s"
 .PHONY : help
 
 

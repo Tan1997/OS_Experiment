@@ -92,11 +92,15 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/main.cpp">
+      </Unit>
       <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.cpp">
       </Unit>
-      <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/processerschema.cpp">
+      <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/processschma.cpp">
       </Unit>
       <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/process.h">
+      </Unit>
+      <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/processschma.h">
       </Unit>
       <Unit filename="/home/cris/gitRep/OS_Experiment/ProcesserSchema_ex2/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

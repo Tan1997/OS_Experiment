@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ProcesserSchema_ex2.dir/processerschema.cpp.o"
+  "CMakeFiles/ProcesserSchema_ex2.dir/processschma.cpp.o"
+  "CMakeFiles/ProcesserSchema_ex2.dir/main.cpp.o"
   "CMakeFiles/ProcesserSchema_ex2.dir/process.cpp.o"
   "ProcesserSchema_ex2.pdb"
   "ProcesserSchema_ex2"
