@@ -6,19 +6,21 @@ process::process()
 	this->workTime = 0;
 	this->name = "process";
 }
-process::process(int ID, int serviceTime, int comeTime, string name="process")
+process::process(int ID, int serviceTime, int comeTime, string name = "process")
 {
 	this->ID = ID;
 	this->serviceTime = serviceTime;
 	this->comeTime = comeTime;
 	this->name = name;
 	this->workTime = 0;
+	this->finishTime = 0;
 }
 
 
 void process::disp()
 {
-	cout<<this->name<<"\t"<<this->ID<<"\t"<<this->comeTime<<"\t"<<this->serviceTime<<"\t"<<this->workTime<<endl;
+	cout << "\t" << this->name << "\t" << this->ID << "\t" << this->comeTime << "\t\t" << this->serviceTime << endl;
+	// <<"\t"<<this->workTime<<"\t"<< this->finishTime<< endl;
 }
 
 void process::run()
@@ -28,7 +30,7 @@ void process::run()
 
 bool process::isFinished()
 {
-	if(workTime >= serviceTime)
+	if (workTime >= serviceTime)
 	{
 		return true;
 	}
