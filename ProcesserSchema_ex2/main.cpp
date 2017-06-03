@@ -34,34 +34,34 @@ void FCFS(processSchma& schema)
 	}
 }
 
-void RR(processSchma& schema)
-{
-	int time = 0;
-	int processNum = schema.processVec.size();
-	boost::circular_buffer<process*> comeonProcess(processNum);
-	while(processNum)
-	{
-		for(vector<process>::iterator iter = schema.processVec.begin(); iter != schema.processVec.end(); iter++)
-		{
-			if( iter->comeTime == time )
-			{
-				comeonProcess.
-			}
-		}
-		if(!comeonProcess.empty())
-		{
-			comeonProcess.front()->run();
-//			comeonProcess.front()->disp();
-			if(comeonProcess.front()->isFinished())
-			{
-				comeonProcess.front()->finishTime = time;
-				comeonProcess.pop();
-				processNum --;
-			}
-		}
-		time++;
-	}
-}
+//void RR(processSchma& schema)
+//{
+//	int time = 0;
+//	int processNum = schema.processVec.size();
+//	boost::circular_buffer<process*> comeonProcess(processNum);
+//	while(processNum)
+//	{
+//		for(vector<process>::iterator iter = schema.processVec.begin(); iter != schema.processVec.end(); iter++)
+//		{
+//			if( iter->comeTime == time )
+//			{
+//				comeonProcess.
+//			}
+//		}
+//		if(!comeonProcess.empty())
+//		{
+//			comeonProcess.front()->run();
+////			comeonProcess.front()->disp();
+//			if(comeonProcess.front()->isFinished())
+//			{
+//				comeonProcess.front()->finishTime = time;
+//				comeonProcess.pop();
+//				processNum --;
+//			}
+//		}
+//		time++;
+//	}
+//}
 
 int main(int argc, char *argv[])
 {
