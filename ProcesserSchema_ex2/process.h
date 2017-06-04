@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author:		胡文博
+ * @email:		huwenbo@mail.dlut.edu.cn
+ * @dateTime:		2017-06-04 15:28:14
+ * @description: 	
+ */
 #ifndef PROCESS_H
 #define PROCESS_H
 #include<string>
@@ -14,6 +21,9 @@ public:
 	void run();
 	bool isFinished();
 	void disp();
+    void dispResult();
+    int getTurnaroundTime();
+    double getWeightedTurnaroundTime();
 };
 
 #endif // PROCESS_H

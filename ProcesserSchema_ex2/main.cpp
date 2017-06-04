@@ -161,7 +161,7 @@ int main(int argc, const char *argv[])
 		return -1;
 	}
 	processSchma pS(argv[1]);
-	cout<<"the given process list is:"<<endl<<"processName  processID  comeTime  serviceTime"<<endl;
+	cout << "the given process list is:" << endl;
 	pS.disp();
 	map<string, function<void(processSchma&)> > myEval;
 	myEval["FCFS"] = FCFS;
@@ -170,7 +170,8 @@ int main(int argc, const char *argv[])
 	myEval["HRN"] = HRN;
 	string comand(argv[2]);
 	myEval[comand](pS);
-	// pS.disp();
+	cout << "\n\n\nwork over, and the result is:" << endl;
+	pS.dispResult();
 	return 0;
 }
 

@@ -1,6 +1,13 @@
+/**
+ * 
+ * @author:		胡文博
+ * @email:		huwenbo@mail.dlut.edu.cn
+ * @dateTime:		2017-06-04 14:58:47
+ * @description: 	
+ */
 #include "processschma.h"
-#include<fstream>
-#include<iostream>
+#include <fstream>
+#include <iostream>
 using namespace std;
 processSchma::processSchma()
 {
@@ -32,8 +39,23 @@ void processSchma::readFromFile(string fileName)
 
 void processSchma::disp()
 {
+	cout<<"-----------------------------------------"<<endl
+		<<"Name  ID  createTime  serviceTime"<<endl
+		<<"-----------------------------------------"<<endl;
 	for(vector<process>::iterator iter = processVec.begin(); iter != processVec.end(); ++iter)
 	{
 		iter->disp();
 	}
+	cout<<"-----------------------------------------"<<endl;
+}
+void processSchma::dispResult()
+{
+    cout<<"------------------------------------------------------------------"<<endl
+        <<"Name  ID  finishTime  turnaroundTime  weightedTurnaroundTime"<<endl
+        <<"------------------------------------------------------------------"<<endl;
+    for(vector<process>::iterator iter = processVec.begin(); iter != processVec.end(); ++iter)
+    {
+        iter->dispResult();
+    }
+    cout<<"------------------------------------------------------------------"<<endl;
 }

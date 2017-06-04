@@ -1,5 +1,12 @@
+/**
+ * 
+ * @author:		胡文博
+ * @email:		huwenbo@mail.dlut.edu.cn
+ * @dateTime:		2017-06-04 15:27:50
+ * @description: 	
+ */
 #include "process.h"
-#include<iostream>
+#include <iostream>
 using namespace std;
 process::process()
 {
@@ -19,8 +26,12 @@ process::process(int ID, int serviceTime, int comeTime, string name = "process")
 
 void process::disp()
 {
-	cout << "\t" << this->name << "\t" << this->ID << "\t" << this->comeTime << "\t\t" << this->serviceTime << endl;
+	cout << "" << this->name << "     " << this->ID << "      " << this->comeTime << "           " << this->serviceTime << endl;
 	// <<"\t"<<this->workTime<<"\t"<< this->finishTime<< endl;
+}
+void process::dispResult()
+{
+    cout << "" << this->name << "     " << this->ID << "      " << this->finishTime << "\t\t\t\b\b\b\b" << this->getTurnaroundTime() <<"\t\t\t"<< this->getWeightedTurnaroundTime()<<endl;
 }
 
 void process::run()
@@ -35,4 +46,13 @@ bool process::isFinished()
 		return true;
 	}
 	return false;
+}
+
+int process::getTurnaroundTime()
+{
+    return finishTime-comeTime;
+}
+double process::getWeightedTurnaroundTime()
+{
+    return (double)getTurnaroundTime()/serviceTime;
 }
