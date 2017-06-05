@@ -1,0 +1,2 @@
+number of blocks: 4
+page access order: 1 2 3 4 2 1 5 6 2 1 2 3 7 6 3 2 1 2 3 6
