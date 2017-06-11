@@ -1,31 +1,40 @@
+% /**
+%  * 
+%  * @author:        胡文博
+%  * @email:        huwenbo@mail.dlut.edu.cn
+%  * @dateTime:        2017-06-11 22:57:22
+%  * @description:     
+%  */
 len = rand(50,1)*8 + 2 ;
 map = zeros(25,20);
 
 storagedFiles = [];
 
-for index = 1:size(rawFiles.len,1)
+for index = 1:size(len,1)
     [map,files] = saveFile(map,[num2str(index),'.txt'],len(index) );
     storagedFiles = [storagedFiles,files];
 end
 
 figure(1);
 imagesc(map);
-for i = 1:size(storagedFiles,2)
-    disp(['name: ',storagedFiles(1,i).name,',    start block: ',num2str(storagedFiles(1,i).start),...
-        ',    length: ',num2str(storagedFiles(1,i).len),'k'])
-end
+title('Storaged 1.txt ~ 50.txt ');
+% for i = 1:size(storagedFiles,2)
+%     disp(['name: ',storagedFiles(1,i).name,',    start block: ',num2str(storagedFiles(1,i).start),...
+%         ',    length: ',num2str(storagedFiles(1,i).len),'k']);
+% end
 
 for i = 1:size(storagedFiles,2)/2
     map = deleteFile(map,storagedFiles(1,i));
-    storagedFiles(i) = []
+    storagedFiles(i) = [];
 end
 
 figure(2);
 imagesc(map);
-for i = 1:size(storagedFiles,2)
-    disp(['name: ',storagedFiles(1,i).name,',    start block: ',num2str(storagedFiles(1,i).start),...
-        ',    length: ',num2str(storagedFiles(1,i).len),'k'])
-end
+title('Deleted 1.txt, 3.txt, ... 49.txt ');
+% for i = 1:size(storagedFiles,2)
+%     disp(['name: ',storagedFiles(1,i).name,',    start block: ',num2str(storagedFiles(1,i).start),...
+%         ',    length: ',num2str(storagedFiles(1,i).len),'k']);
+% end
 
 [map,files] = saveFile(map,'A.txt',7 );
 storagedFiles = [storagedFiles,files];
@@ -39,8 +48,9 @@ storagedFiles = [storagedFiles,files];
 storagedFiles = [storagedFiles,files];
 
 figure(3);
-imagesc(map);
+imagesc(map),colorbar;
 for i = 1:size(storagedFiles,2)
     disp(['name: ',storagedFiles(1,i).name,',    start block: ',num2str(storagedFiles(1,i).start),...
-        ',    length: ',num2str(storagedFiles(1,i).len),'k'])
+        ',    length: ',num2str(storagedFiles(1,i).len),'k']);
 end
+title('Storaged A.txt, B.txt, ... E.txt');

@@ -1,3 +1,10 @@
+% /**
+%  * 
+%  * @author:		胡文博
+%  * @email:		huwenbo@mail.dlut.edu.cn
+%  * @dateTime:		2017-06-11 22:58:16
+%  * @description: 	
+%  */
 function  [bitMap,files] =saveFile( bitMapRaw, fileName, fileSize )
     bitMap = bitMapRaw;
     files.len = fileSize;

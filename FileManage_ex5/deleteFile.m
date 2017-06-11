@@ -1,3 +1,10 @@
+% /**
+%  * 
+%  * @author:        胡文博
+%  * @email:        huwenbo@mail.dlut.edu.cn
+%  * @dateTime:        2017-06-11 22:57:40
+%  * @description:     
+%  */
 function  bitMap =deleteFile( bitMapRaw, fileToDelete)
     bitMap = bitMapRaw;
     blockNum = ceil(fileToDelete.len/2);
