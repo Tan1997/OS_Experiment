@@ -13,6 +13,10 @@ memoryexpression.h
 /home/cris/gitRep/OS_Experiment/StorageManage_ex3/memoryexpression.h
 queue
 -
+map
+-
+functional
+-
 
 /home/cris/gitRep/OS_Experiment/StorageManage_ex3/memoryexpression.cpp
 memoryexpression.h

@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author:		胡文博
+ * @email:		huwenbo@mail.dlut.edu.cn
+ * @dateTime:		2017-06-05 21:24:09
+ * @description: 	
+ */
 #ifndef MEMORYEXPRESSION_H
 #define MEMORYEXPRESSION_H
 #include <vector>
