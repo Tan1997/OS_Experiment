@@ -1,12 +1,28 @@
 # OS_Experiment
 some experiments of operation system course
 
-### Experimental Content
-[timu](./操作系统实验题目2017.pdf)
-<object data="https://github.com/crisb-DUT/OS_Experiment/blob/master/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE2017.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="https://github.com/crisb-DUT/OS_Experiment/blob/master/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE2017.pdf">
-        This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/crisb-DUT/OS_Experiment/blob/master/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E9%A2%98%E7%9B%AE2017.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+## Environment:
+  1. x86-64
+  2. linux 4.4.0
+  3. g++ 5.0 (or any other version supporting C++11)
+  4. cmake >= 2.8
+  5. Matlab >= R2014b
+
+## Steps for Using
+```
+mkdir -p build
+cd build
+cmake ..
+make
+```
+
+## Command Format:
+```
+[command] [input file] [algorithm name]
+```
+
+
+
 ### Ex1 Process Manage
+![](./doc/1.png) ![](./doc/2.png)
 
