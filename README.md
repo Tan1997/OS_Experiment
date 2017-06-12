@@ -21,8 +21,19 @@ make
 [command] [input file] [algorithm name]
 ```
 
-
-
-### Ex1 Process Manage
+## Ex1 Process Manage
 ![](./doc/1.png) ![](./doc/2.png)
+
+I implemment this experiment with C++ in Linux, the result is:
+![](./doc/out.gif)
+![](./doc/shell.gif)
+
+## Ex2 Processer Schema
+![](./doc/3.png)
+I implemment this experiment with C++ in Linux, the result is shown in follow. Note that, the given process list could be modified in the file processList.txt.
+![](./doc/processerSchema.gif)
+
+## Ex3 Storage Manage
+![](./doc/4.png)
+
 
