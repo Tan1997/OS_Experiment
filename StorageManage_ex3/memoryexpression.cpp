@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author:		胡文博
+ * @email:		huwenbo@mail.dlut.edu.cn
+ * @dateTime:		2017-06-05 21:24:01
+ * @description: 	
+ */
 #include "memoryexpression.h"
 
 using namespace std;
