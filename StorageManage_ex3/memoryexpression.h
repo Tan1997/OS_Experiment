@@ -12,20 +12,15 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-
- using namespace std;
-
-class memoryExpression
+using namespace std;
+class memoryExpression//内存表示类
 {
-
 public:
-	vector<bool> pageList;
-	vector<int> pageAccessOrder;
-	int blockNum = 0 ;
-//	memoryExpression();
+	vector<bool> pageList;//页表，bool值表示该页是否在内存中
+	vector<int> pageAccessOrder;//页面访问序列
+	int blockNum = 0 ;//系统为进程分配的内存块数，可由配置文件更改
 	memoryExpression(string fileName);
-	void dispPageAccessOrder();
-	void disppageList();
+	void dispPageAccessOrder();//打印页面访问序列
+	void disppageList();//打印页表
 };
-
 #endif // MEMORYEXPRESSION_H

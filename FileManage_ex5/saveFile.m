@@ -3,7 +3,7 @@
 %  * @author:		胡文博
 %  * @email:		huwenbo@mail.dlut.edu.cn
 %  * @dateTime:		2017-06-11 22:58:16
-%  * @description: 	
+%  * @description: 	存储文件函数
 %  */
 function  [bitMap,files] =saveFile( bitMapRaw, fileName, fileSize )
     bitMap = bitMapRaw;
@@ -12,6 +12,7 @@ function  [bitMap,files] =saveFile( bitMapRaw, fileName, fileSize )
     fileSize = ceil(fileSize/2);
     cnt = 0;
     result = 0;
+    %寻找第一块能够放下改文件的物理块序列
     for indexi = 1:size(bitMapRaw,1)
         for indexj = 1:size(bitMapRaw,2)
             if(bitMapRaw(indexi,indexj) > 0)
@@ -35,6 +36,7 @@ function  [bitMap,files] =saveFile( bitMapRaw, fileName, fileSize )
     files.start = bitNum;
     startj = mod(bitNum-1, size(bitMapRaw,2) ) + 1;
     starti = (bitNum - startj)/size(bitMapRaw,2) + 1;
+    % 将该物理块序列的位示图置1
     for i = starti:indexi
         if (i == starti)
             s = startj;

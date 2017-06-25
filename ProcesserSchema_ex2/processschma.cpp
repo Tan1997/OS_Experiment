@@ -10,15 +10,12 @@
 #include <iostream>
 using namespace std;
 processSchma::processSchma()
-{
-	
-}
+{}
 processSchma::processSchma(string fileName)
 {
 	readFromFile(fileName);
 }
-
-void processSchma::readFromFile(string fileName)
+void processSchma::readFromFile(string fileName)//从文件读取进程调度实例
 {
 	fstream f;
 	f.open(fileName);
@@ -36,8 +33,7 @@ void processSchma::readFromFile(string fileName)
 		this->processVec.push_back(indexP);
 	}
 }
-
-void processSchma::disp()
+void processSchma::disp()//打印所有进程信息
 {
 	cout<<"-----------------------------------------"<<endl
 		<<"Name  ID  createTime  serviceTime"<<endl
@@ -48,7 +44,7 @@ void processSchma::disp()
 	}
 	cout<<"-----------------------------------------"<<endl;
 }
-void processSchma::dispResult()
+void processSchma::dispResult()//打印所有进程结果信息
 {
     cout<<"------------------------------------------------------------------"<<endl
         <<"Name  ID  finishTime  turnaroundTime  weightedTurnaroundTime"<<endl

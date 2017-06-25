@@ -22,42 +22,39 @@ int main(int argc, char const *argv[])
 	string s;
 	cout << "young@shel: ->_->";
 	vector<string> vecStr;
-	while (getline(cin, s))
+	while (getline(cin, s))//读入一行输入
 	{
-		cout << "young@shel: ->_->";
+		cout << "young@shel: ->_->";//打印命令提示符
 		vecStr.clear();
 		boost::char_separator<char> sep("  ,()");
 		typedef boost::tokenizer<boost::char_separator<char> >
 		CustonTokenizer;
-		CustonTokenizer tok(s, sep);
+		CustonTokenizer tok(s, sep);//正则表达式将输入字符串分割为命令和参数
 		for (CustonTokenizer::iterator beg = tok.begin(); beg != tok.end(); ++beg)
 		{
 			vecStr.push_back(*beg);
 		}
-		if (vecStr.size())
+		if (vecStr.size())//非空输入
 		{
-			// cout<<vecStr.size()<<endl;
-			if (fork() == 0)
+			if (fork() == 0)//判断是否位于子进程
 			{
-				// cout<<getpid()<<endl;
-				if (vecStr[0] == "max")
+				if (vecStr[0] == "max")//子进程装入max(m,n)程序数据
 				{
 					execlp("/home/cris/gitRep/OS_Experiment/ProcessManange_ex1/build/max", "./max", vecStr[1].data(), vecStr[2].data(), NULL);
 					exit(0);
 				}
-				else if (vecStr[0] == "min")
+				else if (vecStr[0] == "min")//子进程装入min(m,n)程序数据
 				{
 					execlp("/home/cris/gitRep/OS_Experiment/ProcessManange_ex1/build/min", "./min", vecStr[1].data(), vecStr[2].data(), NULL);
 					exit(0);
 				}
-				else if (vecStr[0] == "average")
+				else if (vecStr[0] == "average")//子进程装入average(m,n,l)程序数据
 				{
 					execlp("/home/cris/gitRep/OS_Experiment/ProcessManange_ex1/build/average", "./average", vecStr[1].data(), vecStr[2].data(), vecStr[3].data(), NULL);
 					exit(0);
 				}
 				else
 					exit(0);
-				// cout << "young@shel: ->_->";
 			}
 		}
 	}

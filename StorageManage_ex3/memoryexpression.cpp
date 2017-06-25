@@ -6,10 +6,7 @@
  * @description: 	
  */
 #include "memoryexpression.h"
-
 using namespace std;
-
-
 memoryExpression::memoryExpression( string fileName )
 {
 	fstream f;
@@ -33,16 +30,14 @@ memoryExpression::memoryExpression( string fileName )
 		this->pageList.push_back(false);
 	}
 }
-
-void memoryExpression::dispPageAccessOrder()
+void memoryExpression::dispPageAccessOrder()//打印页面访问序列
 {
 	for (auto index = this->pageAccessOrder.begin(); index != pageAccessOrder.end(); index++)
 	{
 		cout << *index << endl;
 	}
 }
-
-void memoryExpression::disppageList()
+void memoryExpression::disppageList()//打印页表
 {
 	for (auto index = pageList.begin(); index != pageList.end(); index++)
 	{
